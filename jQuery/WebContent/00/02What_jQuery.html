@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="EUC-KR">
+	
+	<script src="../javascript/jquery-2.1.4.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	
+	function change(elem){
+		elem.style.color="red";
+	}
+	
+	$(function(){
+		
+		$('span').click(function(){
+			
+			$(this).css('color','red');
+		})
+	});
+	
+	//전부 load되면>가장마지막
+	window.onload = function(){
+		alert("element 파싱, load 완료시점 alert 창 open \n\n window.onload사용")
+	}
+	//준비되면
+	$(document).ready(function(){
+		alert("element 파싱, load 완료시점 alert 창 open \n\n jQuery $(document).ready() 사용")
+	});
+	
+	$(function(){
+		alert("element 파싱 (load)완료시점 alert 창 open \n\n jQuery $() 사용")
+	});
+	
+	jQuery(function(){
+		alert("element 파싱 (load)완료시점 alert 창 open \n\n jQuery $() 사용")
+	});
+	
+	window.jQuery(function(){
+		alert("element 파싱 (load)완료시점 alert 창 open \n\n jQuery $() 사용")
+	});
+	
+	window.$(function(){
+		alert("element 파싱 (load)완료시점 alert 창 open \n\n jQuery $() 사용")
+	});
+	
+	
+	//window.jQuery = window.$ = jQuery = $  총 4개의 표현식 
+	
+	
+	
+	</script>
+</head>
+
+<body>
+	<div onclick="javascript:change(this)">
+		jQuery:javascript Framework<br/>
+	</div>
+	
+	<hr/>
+	
+	<span>
+		-모든 브라우저에서 동작하는(Cross Browser)클라이언트 javascript Lib.<br/>
+		-DOM(Document Object Model)과 관련된 처리를 쉽게 구현<br/>
+		-일관된 이벤트 연결을 쉽게 구현<br/>
+		-Ajax Application 구현을 쉽게<br/>
+	</span>
+
+</body>
+	<style type="text/css">
+		span{
+			background-color: yellow;
+			font-size: 10pt;
+		}
+		
+		.abc{
+			background-color: green;
+			font-size: 20pt;
+		}
+		
+		#uniqueId{
+			background-color: red;
+			font-size: 30pt;
+		}
+	
+	</style>
+</head>
+
+<body>
+	<!--	
+
+		: Div는 줄바꿈을 하고 Span은 줄바꿈이 없습니다. 
+	-->
+	<span> Framework 이란?</span>
+	<span class="abc">javascript Framework</span>
+	<div id="uniqueId">jQuery Framework</div>		
+
+</body>
+	
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="EUC-KR">
+	
+	<script src="../javascript/jquery-2.1.4.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	
+	
+	$(document).ready(function(){
+		
+	
+		
+		//$('form').css('color','red');
+		//$('form[name]').css('color', 'red');
+	
+		//array로 순서부여한 뒤 접근>javascript가 근원이 되기에 jquery로 변환
+		//$(	$('form[name]')[0]).css('color','red');//두번 감싸는 이유: javascript객체를 jquery객체로(css)
+		//$(	$('form[name]')[1]).css('color','red');
+		
+		
+		//직접 지목하여 접근
+		//$('form[name="test01"]').css('color','red');
+		//$('form p').css('color', 'red');
+		$('form[name ="test01"] p').css('color','red');
+		//$('form[name ="test01"] p, form[name="test02"]span').css('color','red');
+		
+		
+		/*연산자 종류
+		att = vlaue     : value 같은
+		att != vlaue     : value 다른
+		att ^= vlaue     : value 로 시작하는
+		att $= vlaue     : value 로 끝나는
+		att *= vlaue     : value 를 포함하는
+		
+		같은 계열에서만 작용 됨 예:form[name !="test01"] 할 때 h 계열은 변하지 않음
+		
+		
+		*/
+		
+		
+		});
+	</script>
+	
+</head>
+
+<body>
+	<!--	
+		: Div는 줄바꿈을 하고 Span은 줄바꿈이 없습니다. 
+	-->
+	<h1>javascript Framework: jQuery학습</h1>
+	<h2>사용법 숙지</h2>
+	<h3>test</h3>	
+	
+	<form name="test01">
+		<p>jQuery란</p>
+	</form>
+	
+	<div>
+		<p>javascript Framework</p>
+	</div>
+	
+	<form name="test02">
+		<p>Framework란
+			<span>확장,재사용 가능한 Lib</span>
+		</p>
+	</form>
+
+</body>
+	
+</html>
